@@ -6,6 +6,10 @@ __pycache__/
 
 .idea/
 
+# user's folders
+lectures/
+seminars/
+
 
 # C extensions
 *.so
