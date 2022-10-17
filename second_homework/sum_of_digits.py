@@ -1,7 +1,8 @@
 """
-Задача 1. Напишите программу, которая принимает на вход вещественное или целое число и показывает сумму его цифр.
-Через строку нельзя решать.
-*Пример:*
+The program takes in a real or integer number and shows the sum of its digits.
+According to the condition of the task: it is impossible to solve through a string.
+
+*Example:*
 
 - 6782 -> 23
 - 0,56 -> 11
@@ -11,9 +12,10 @@ from fractions import Fraction
 
 def sum_of_digits(number: Fraction) -> int:
     """
+    The function sums the digits in a number.
 
     :param number: Fraction.
-    :return:
+    :return: int. Sum of digits.
     """
     sum = 0
     fractional_part = Fraction((number - int(number)))  # 1.23 - 1 = 0.23
@@ -47,6 +49,7 @@ def program_check():
 
 try:
     program_check()
+    # Important: to cast the input data to a Fraction type, otherwise an error accumulates
     number = Fraction(input("Enter a number: "))
     print(f"Number: {float(number)} -> {sum_of_digits(number)}")
 except ValueError:
