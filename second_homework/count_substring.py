@@ -17,7 +17,7 @@ def find_substring(pattern: str, text: str) -> list:
         return []
     # if length_text=19 length_pattern=3 then we iterate 19 - 3 + 1 = 17
     times = len(text) - len(pattern) + 1
-    for i in range(times):  # range [0;17) 17 not include then [0;16]
+    for i in range(times):
         # move the border of the text slice on every iteration
         # [0:3][1:4][2:5] etc.
         if pattern == text[i:len(pattern) + i]:
